@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+Descricao: Projeto integrador - Blog de Conteúdo sobre games
+nome_arquivo: sobre.html
+nome_exercicio: Projeto Game Over Blog
+nome_aluno: Nicolas Safra Gazige
+email_aluno: nicolas.gazige@aluno.cps.sp.gov.br
+turma: WEBI-ISW028-A
+-->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça o Game Over Blog e entre em contato.">
+    <title>Sobre | Game Over Blog</title>
+
+    <!-- Estilos da página -->
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+    <!-- Cabeçalho: logo e navegação (igual em todas as páginas) -->
+    <header>
+        <a href="index.html" class="logo">Game Over <span>Blog</span></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="sobre.html" class="ativo" aria-current="page">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal (muda de página para página) -->
+    <main>
+        <h1>Sobre o Game Over Blog</h1>
+
+        <section>
+            <p>O Game Over Blog é um blog feito por quem ama videogames. Publicamos prévias, análises e listas para ajudar você a escolher o próximo jogo.</p>
+
+            <h2>O que você encontra aqui</h2>
+            <ul>
+                <li>Prévias de lançamentos</li>
+                <li>Rankings e listas</li>
+                <li>Dicas para iniciantes</li>
+            </ul>
+        </section>
+
+        <section class="contato">
+            <h2>Fale conosco</h2>
+            <form action="#" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="assunto">Assunto:</label>
+                <select id="assunto" name="assunto">
+                    <option value="sugestao">Sugestão de post</option>
+                    <option value="parceria">Parceria</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé (igual em todas as páginas) -->
+    <footer>
+        <p>&copy; 2026 Game Over Blog - Nicolas Safra Gazige</p>
+        <p><a href="sobre.html">Fale conosco</a></p>
+    </footer>
+</body>
+</html>
