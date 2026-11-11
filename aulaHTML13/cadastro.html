@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+Descricao: Projeto integrador - Blog de Conteúdo sobre games
+nome_arquivo: cadastro.html
+nome_exercicio: Aula 13 - Elementos Avançados de Formulário (cadastro)
+nome_aluno: Nicolas Safra Gazige
+email_aluno: nicolas.gazige@aluno.cps.sp.gov.br
+turma: WEBI-ISW028-A
+-->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crie sua conta no Game Over Blog.">
+    <title>Cadastro | Game Over Blog</title>
+
+    <!-- Estilos do site + estilos dos formulários da Aula 13 -->
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- Cabeçalho: logo e navegação (igual em todas as páginas) -->
+    <header>
+        <a href="../index.html" class="logo">Game Over <span>Blog</span></a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../sobre.html">Sobre</a></li>
+                <li><a href="../login.html">Login</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pagina-form">
+        <h1>Criar conta</h1>
+        <p class="subtitulo">Cadastre-se para comentar nos posts do blog</p>
+
+        <!-- novalidate: a validação é feita pelo main.js -->
+        <form id="formCadastro" action="#" method="post" novalidate>
+
+            <div class="campo">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome">
+                <span class="erro" id="erroNome"></span>
+            </div>
+
+            <div class="campo">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com">
+                <span class="erro" id="erroEmail"></span>
+            </div>
+
+            <div class="campo">
+                <label for="senha">Senha</label>
+                <!-- type="password" deixa a senha oculta -->
+                <input type="password" id="senha" name="senha" placeholder="Mínimo de 6 caracteres">
+                <span class="erro" id="erroSenha"></span>
+            </div>
+
+            <div class="campo">
+                <label for="confirmaSenha">Confirmar senha</label>
+                <input type="password" id="confirmaSenha" name="confirmaSenha" placeholder="Repita a senha">
+                <span class="erro" id="erroConfirma"></span>
+            </div>
+
+            <!-- checkbox: aceitar os termos -->
+            <div class="campo">
+                <label class="opcao">
+                    <input type="checkbox" id="termos" name="termos"> Li e aceito os termos de uso
+                </label>
+                <span class="erro" id="erroTermos"></span>
+            </div>
+
+            <button type="submit">Cadastrar</button>
+
+            <p class="mensagem" id="mensagem"></p>
+        </form>
+
+        <p class="rodape-form">Já tem conta? <a href="../login.html">Entrar</a></p>
+    </main>
+
+    <!-- Rodapé (igual em todas as páginas) -->
+    <footer>
+        <p>&copy; 2026 Game Over Blog - Nicolas Safra Gazige</p>
+        <p><a href="../sobre.html">Fale conosco</a></p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

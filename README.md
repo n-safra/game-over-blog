@@ -22,6 +22,9 @@ Usei **HTML** no site porque é a linguagem que o navegador mostra como página.
 - `post1.html`: prévia do GTA 6
 - `post2.html`: Top 5 jogos indie
 - `sobre.html`: sobre o blog e contato
+- `login.html`: tela de login (Aula 12)
+- `aulaHTML13/cadastro.html`: cadastro com confirmação de senha e aceite dos termos (Aula 13)
+- `aulaHTML13/perfil.html`: perfil de jogador com `radio`, `checkbox`, `select` e `textarea` (Aula 13)
 
 ## Wireframes
 
@@ -34,6 +37,7 @@ Usei **HTML** no site porque é a linguagem que o navegador mostra como página.
 - **Tags semânticas** (`header`, `main`, `article`, `footer`) para organizar a página.
 - **Um só arquivo CSS** para todas as páginas, assim fica mais fácil mudar o visual.
 - **Pastas separadas** para CSS e imagens.
+- **localStorage** no perfil (Aula 13): os dados ficam salvos no navegador. A senha do cadastro não é guardada, por segurança.
 
 ## Problemas e soluções
 

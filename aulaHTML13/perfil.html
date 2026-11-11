@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+Descricao: Projeto integrador - Blog de Conteúdo sobre games
+nome_arquivo: perfil.html
+nome_exercicio: Aula 13 - Elementos Avançados de Formulário (perfil)
+nome_aluno: Nicolas Safra Gazige
+email_aluno: nicolas.gazige@aluno.cps.sp.gov.br
+turma: WEBI-ISW028-A
+-->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Monte seu perfil de jogador no Game Over Blog.">
+    <title>Perfil | Game Over Blog</title>
+
+    <!-- Estilos do site + estilos dos formulários da Aula 13 -->
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- Cabeçalho: logo e navegação (igual em todas as páginas) -->
+    <header>
+        <a href="../index.html" class="logo">Game Over <span>Blog</span></a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../sobre.html">Sobre</a></li>
+                <li><a href="../login.html">Login</a></li>
+                <li><a href="perfil.html" class="ativo" aria-current="page">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pagina-form">
+        <h1>Meu perfil de jogador</h1>
+        <p class="subtitulo">Conte para a gente como você joga</p>
+        <!-- Preenchido pelo main.js se houver cadastro salvo -->
+        <p class="saudacao" id="saudacao"></p>
+
+        <!-- novalidate: a validação é feita pelo main.js -->
+        <form id="formPerfil" action="#" method="post" novalidate>
+
+            <!-- Campo de texto simples -->
+            <div class="campo">
+                <label for="apelido">Apelido (nick)</label>
+                <input type="text" id="apelido" name="apelido" placeholder="Ex.: Ezio_BR">
+                <span class="erro" id="erroApelido"></span>
+            </div>
+
+            <!-- RADIO: só uma opção pode ser marcada (mesmo name) -->
+            <fieldset class="campo">
+                <legend>Que tipo de jogador você é?</legend>
+                <div class="grupo-opcoes">
+                    <label class="opcao"><input type="radio" name="tipo" value="casual"> Casual</label>
+                    <label class="opcao"><input type="radio" name="tipo" value="intermediario"> Intermediário</label>
+                    <label class="opcao"><input type="radio" name="tipo" value="hardcore"> Hardcore</label>
+                </div>
+                <span class="erro" id="erroTipo"></span>
+            </fieldset>
+
+            <!-- SELECT: lista suspensa (dropdown) -->
+            <div class="campo">
+                <label for="plataforma">Plataforma favorita</label>
+                <select id="plataforma" name="plataforma">
+                    <option value="">-- Selecione --</option>
+                    <option value="pc">PC</option>
+                    <option value="playstation">PlayStation</option>
+                    <option value="xbox">Xbox</option>
+                    <option value="switch">Nintendo Switch</option>
+                    <option value="mobile">Celular</option>
+                </select>
+                <span class="erro" id="erroPlataforma"></span>
+            </div>
+
+            <!-- CHECKBOX: várias opções podem ser marcadas -->
+            <fieldset class="campo">
+                <legend>Gêneros favoritos (escolha pelo menos 1)</legend>
+                <div class="grupo-opcoes">
+                    <label class="opcao"><input type="checkbox" name="generos" value="acao"> Ação</label>
+                    <label class="opcao"><input type="checkbox" name="generos" value="rpg"> RPG</label>
+                    <label class="opcao"><input type="checkbox" name="generos" value="esporte"> Esporte</label>
+                    <label class="opcao"><input type="checkbox" name="generos" value="corrida"> Corrida</label>
+                    <label class="opcao"><input type="checkbox" name="generos" value="indie"> Indie</label>
+                    <label class="opcao"><input type="checkbox" name="generos" value="terror"> Terror</label>
+                </div>
+                <span class="erro" id="erroGeneros"></span>
+            </fieldset>
+
+            <!-- TEXTAREA: campo de texto longo -->
+            <div class="campo">
+                <label for="bio">Sobre você</label>
+                <textarea id="bio" name="bio" rows="5" maxlength="300"
+                    placeholder="Fale um pouco dos jogos que você curte..."></textarea>
+                <div class="linha-info">
+                    <span class="erro" id="erroBio"></span>
+                    <span class="contador" id="contador">0/300</span>
+                </div>
+            </div>
+
+            <button type="submit">Salvar perfil</button>
+            <!-- type="button": não envia o formulário, só apaga o perfil salvo -->
+            <button type="button" id="apagarPerfil" class="botao-secundario">Apagar perfil salvo</button>
+
+            <p class="mensagem" id="mensagem"></p>
+        </form>
+    </main>
+
+    <!-- Rodapé (igual em todas as páginas) -->
+    <footer>
+        <p>&copy; 2026 Game Over Blog - Nicolas Safra Gazige</p>
+        <p><a href="../sobre.html">Fale conosco</a></p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
